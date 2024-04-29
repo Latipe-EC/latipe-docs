@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    # Review gh actions docs if you want to further define triggers, paths, etc
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
   build:
@@ -13,16 +15,19 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
 
       - name: Install dependencies
-        run: npx yarn install --frozen-lockfile
+        run: npm ci
       - name: Build website
-        run: npx yarn build
+        run: npm run build
 
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: build
           path: build
 
   deploy:
