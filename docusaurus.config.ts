@@ -69,8 +69,8 @@ const config: Config = {
           position: 'left',
           label: 'Giới thiệu',
         },
-        { to: '/docs/componets', label: 'Thành phần', position: 'left' },
-        { to: '/docs/getting-started', label: 'Hướng dẫn', position: 'left' },
+        { to: '/docs/Service/overview', label: 'Thành phần', position: 'left' },
+        { to: '/docs/Setup/started', label: 'Hướng dẫn', position: 'left' },
         {
           href: 'https://github.com/Latipe-EC',
           label: 'GitHub',
@@ -85,7 +85,7 @@ const config: Config = {
           title: 'Latipe EC Project',
           items: [
             {
-              label: 'Dự án xây dựng wesite thương mại điện tử sử dụng kiến trúc Microservice cho Khóa luận tốt nghiệp. Thực hiện bởi nhóm sinh viên năm cuối trường Đại học Sư Phạm Kỹ Thuật TP.HCM', 
+              label: 'Dự án xây dựng wesite thương mại điện tử sử dụng kiến trúc Microservice cho Khóa luận tốt nghiệp. Thực hiện bởi nhóm sinh viên năm cuối trường Đại học Sư Phạm Kỹ Thuật TP.HCM',
               to: '#',
             },
           ],
